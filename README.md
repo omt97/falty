@@ -1,2 +1,2 @@
-# falty
+# Falty
 App falty
