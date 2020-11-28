@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "327818488186",
+    "firebase_url": "https://falty-1ecca.firebaseio.com",
+    "project_id": "falty-1ecca",
+    "storage_bucket": "falty-1ecca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327818488186:android:6dbd37279f091c1ca94ec3",
+        "android_client_info": {
+          "package_name": "com.finishcollections.falty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327818488186-uicvc9rnmk2gqov06qkt14mlucm1ij4m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.finishcollections.falty",
+            "certificate_hash": "28d98ee107c53f95f81ac43dfdaa9184dc2cc704"
+          }
+        },
+        {
+          "client_id": "327818488186-e65ubvn97n23tgo1bnvmovm3ae3jf3eq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN2-kkxZbrtw2S3-xw274OZ9l00za4ceU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327818488186-e65ubvn97n23tgo1bnvmovm3ae3jf3eq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
