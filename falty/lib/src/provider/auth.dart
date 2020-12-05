@@ -53,19 +53,19 @@ class AuthProvider {
   UserModel _userFromFirebaseUser(User user){
     //TODO crear que al iniciar session se haga información nueva de un usuario en 
     return user != null 
-            ? UserModel(
-              uid: user.uid, 
-              nick: 'a', 
-              email: user.email, 
-              name: 'a', 
-              surname: 'b', 
-              color: 'yellow',
-              photo: user.photoURL, 
-              seguidos: [], 
-              bloqueados: [], 
-              logros: [], 
-              colecciones: []) 
-            : null;
+      ? UserModel(
+        uid: user.uid, 
+        nick: 'a', 
+        email: user.email, 
+        name: 'a', 
+        surname: 'b', 
+        color: 'yellow',
+        photo: user.photoURL, 
+        seguidos: [], 
+        bloqueados: [], 
+        logros: [], 
+        colecciones: []) 
+      : null;
   }
 
 }

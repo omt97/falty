@@ -1,5 +1,4 @@
 import 'package:falty/src/bloc/user_bloc.dart';
-import 'package:falty/src/models/user_model.dart';
 import 'package:flutter/material.dart';
 
 class NavigationPage extends StatelessWidget {

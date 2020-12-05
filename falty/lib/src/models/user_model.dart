@@ -1,3 +1,5 @@
+import 'package:falty/src/util/tuples.dart';
+
 class UserModel{
 
   final String uid;
@@ -17,6 +19,8 @@ class UserModel{
   final List<String> logros;
   //uid coleccion
   final List<String> colecciones;
+  //uid coleccion
+  final List<Tuple3<String, String, int>> items;
 
   UserModel({
     this.uid,
@@ -30,7 +34,8 @@ class UserModel{
     this.seguidores,
     this.bloqueados,
     this.logros,
-    this.colecciones 
+    this.colecciones, 
+    this.items
   });
 
 }

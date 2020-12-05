@@ -1,5 +1,3 @@
-import 'package:falty/src/models/user_model.dart';
-
 class Logro {
 
   String uid;
