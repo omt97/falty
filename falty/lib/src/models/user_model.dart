@@ -2,25 +2,25 @@ import 'package:falty/src/util/tuples.dart';
 
 class UserModel{
 
-  final String uid;
-  final String nick;
-  final String email;
-  final String name;
-  final String surname;
+  String uid;
+  String nick;
+  String email;
+  String name;
+  String surname;
   String color;
   String photo;
   //uid usuarios
-  final List<String> seguidos;
+  List<String> seguidos;
   //uid usuarios
-  final List<String> seguidores;
+  List<String> seguidores;
   //uid usuarios
-  final List<String> bloqueados;
+  List<String> bloqueados;
   //uid logro
-  final List<String> logros;
+  List<String> logros;
   //uid coleccion
-  final List<String> colecciones;
+  List<String> colecciones;
   //uid coleccion
-  final List<Tuple3<String, String, int>> items;
+  List<Tuple3<String, String, int>> items;
 
   UserModel({
     this.uid,

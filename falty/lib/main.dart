@@ -1,13 +1,14 @@
 import 'package:falty/src/bloc/user_bloc.dart';
 import 'package:falty/src/models/user_model.dart';
+import 'package:falty/src/pages/colecciones/colecciones_page.dart';
 import 'package:falty/src/pages/wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
- 
+
 void main() => runApp(MyApp());
 
 final UserBloc _userBloc = UserBloc();
- 
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         initialRoute: 'wrapper',
         routes: {
           Wrapper.routeName: (BuildContext context) => Wrapper(),
+          //ColeccionesPage.routeName: (BuildContext context) => ColeccionesPage(),
         }
       )
     );

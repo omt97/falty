@@ -27,6 +27,12 @@ class ColeccionBloc {
   final _coleccionesRecientesController = StreamController<List<Coleccion>>.broadcast();
   //bloc colecciones populares
   final _coleccionesPopularesController = StreamController<List<Coleccion>>.broadcast();
+  //bloc colecciones populares
+  final _coleccionesSearchController = StreamController<List<Coleccion>>.broadcast();
+  //bloc colecciones populares
+  final _coleccionesSeguidasController = StreamController<List<Coleccion>>.broadcast();
+  //bloc colecciones populares
+  //final _coleccionesFavoritasController = StreamController<List<Coleccion>>.broadcast();
   //bloc coleccion actual
   final _coleccionController = StreamController<Coleccion>.broadcast();
 
@@ -38,6 +44,10 @@ class ColeccionBloc {
   Stream<List<Coleccion>> get coleccionesRecientesStream => _coleccionesRecientesController.stream;
   //obtener colecciones populares
   Stream<List<Coleccion>> get coleccionesPopularesStream => _coleccionesPopularesController.stream;
+  //obtener colecciones populares
+  Stream<List<Coleccion>> get coleccionesSearchStream => _coleccionesSearchController.stream;
+  //obtener colecciones populares
+  Stream<List<Coleccion>> get coleccionesSeguidasStream => _coleccionesSeguidasController.stream;
   //obtener coleccion actual
   Stream<Coleccion> get coleccionStream => _coleccionController.stream;
 
@@ -59,13 +69,24 @@ class ColeccionBloc {
 
   //TODO obtener colecciones search
   Future obtenerColeccionesSearch(String word) async{
-    _coleccionesController.sink.add(await ColeccionDatabaseProvider().coleccionesSearch(word));
+    _coleccionesSearchController.sink.add(await ColeccionDatabaseProvider().coleccionesSearch(word));
   }
 
   //TODO obtener coleccion
   Future obtenerColeccion(String uid) async{
+    //Coleccion c = await ColeccionDatabaseProvider().coleccion(uid);
+    print('-------------------  ' + uid);
     _coleccionController.sink.add(await ColeccionDatabaseProvider().coleccion(uid));
   }
+
+    //TODO obtener coleccion
+  Future obtenerColeccionesSeguidas(String uid) async{
+    //Coleccion c = await ColeccionDatabaseProvider().coleccion(uid);
+    List<String> uidColecciones = await UserDatabaseProvider().getUserColecciones(uid);
+    _coleccionesSeguidasController.sink.add(await ColeccionDatabaseProvider().coleccionesIds(uidColecciones));
+  }
+
+
 
   //TODO añadir coleccion (no se podra hacer directamente, revision de administradores) --> hay recompensa para el que lo haga
   //TODO editar coleccion (no se podra hacer directamente, revision de administradores) --> hay recompensa para el que lo haga

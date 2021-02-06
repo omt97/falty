@@ -55,10 +55,10 @@ class AuthProvider {
     return user != null 
       ? UserModel(
         uid: user.uid, 
-        nick: 'a', 
+        nick: 'nuevoNick', 
         email: user.email, 
-        name: 'a', 
-        surname: 'b', 
+        name: 'nuevoNombre', 
+        surname: 'nuevoApellido', 
         color: 'yellow',
         photo: user.photoURL, 
         seguidos: [], 
